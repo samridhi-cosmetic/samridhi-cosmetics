@@ -122,9 +122,12 @@ document.getElementById("search").addEventListener("input", function () {
 function openLightbox(src){
   document.getElementById("lightbox").style.display = "flex";
   document.getElementById("lightbox-img").src = src;
+  document.body.classList.add("lightbox-open");
 }
 
 function closeLightbox(){
   document.getElementById("lightbox").style.display = "none";
+  document.body.classList.remove("lightbox-open");
 }
+
 
