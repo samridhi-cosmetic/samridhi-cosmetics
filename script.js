@@ -51,7 +51,7 @@ function displayProducts(list) {
     }
 
     div.innerHTML = `
-      <img src="${product.variants[0].img}" alt="${product.name}" onerror="this.src='images/default-placeholder.jpg'">
+     <img src="${product.variants[0].img}" alt="${product.name}" onclick="openLightbox(this.src)">
       <h3>${product.name}</h3>
       <p>₹${product.price}</p>
       ${variantSelect}
@@ -119,3 +119,12 @@ document.getElementById("search").addEventListener("input", function () {
     }
   });
 });
+function openLightbox(src){
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display = "none";
+}
+
