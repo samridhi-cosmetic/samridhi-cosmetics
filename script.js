@@ -12,31 +12,21 @@ const products = [
     ]
   },
   {
-    name: "Maybelline Lipstick",
-    category: "lipstick",
-    price: 399,
-    featured: true,
-    variants: [
-      {shade: "Rose", img: "images/maybelline-lipstick-rose.jpg"},
-      {shade: "Coral", img: "images/maybelline-lipstick-coral.jpg"}
-    ]
-  },
-  {
-    name: "Lotus Nail Paint",
+    name: "Elle 18 Nail Paint",
     category: "nailpaint",
     price: 199,
     featured: false,
     variants: [
-      {shade: "Red", img: "images/lotus-nailpaint.jpg"}
+      {shade: "Red", img: "images/Elle18Red.jpeg"}
     ]
   },
   {
-    name: "L'Oreal Mascara",
+    name: "Blue Heaven Mascara",
     category: "mascara",
     price: 499,
     featured: false,
     variants: [
-      {shade: "Black", img: "images/loreal-mascara.jpg"}
+      {shade: "Black", img: "images/blueHeavenMascara.jpg"}
     ]
   }
 ];
