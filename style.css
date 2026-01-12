@@ -1,80 +1,97 @@
-/* ===== Google Font ===== */
+/* ===== GENERAL ===== */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #FFF8F9; /* soft blush */
-    color: #333333;
+    background-color: #FFF8F0; /* Creamy background */
+    color: #4A3F4B; /* Dark Mauve for text */
     margin: 0;
     padding: 0;
-    background-image: url('https://images.unsplash.com/photo-1556228724-4d08f7f618de?auto=format&fit=crop&w=1200&q=40');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    opacity: 0.98; /* subtle background effect */
 }
 
-/* ===== Hero Banner ===== */
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #F7D9E3; /* Soft pastel pink */
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #6D4C63; /* Dark mauve */
+}
+header p { margin: 5px 0; font-weight: 400; color: #5A4556; }
+
+/* Hero Banner */
 .hero {
     width: 100%;
     max-height: 300px;
     overflow: hidden;
     border-radius: 12px;
     margin: 20px auto;
+    position: relative;
 }
-
 .hero img {
     width: 100%;
     object-fit: cover;
     border-radius: 12px;
 }
 
-/* ===== Header ===== */
-header {
+/* Featured Products */
+.featured {
+    padding: 20px;
     text-align: center;
-    padding: 30px 20px;
-    background-color: rgba(253,243,245,0.9); /* semi-transparent soft blush */
+}
+.featured h2 {
+    font-size: 1.8em;
+    color: #6D4C63;
+    margin-bottom: 20px;
+}
+.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+.featured .product {
+    border: 2px solid #F7D9E3;
+    width: 220px;
+    transition: 0.4s;
+    position: relative;
+}
+.featured .product:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+/* Decorative icon */
+.featured .product::after {
+    content: url('https://img.icons8.com/ios-filled/20/6D4C63/lipstick.png');
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0.3;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #D45C7B;
-}
-
-header p {
-    margin: 5px 0;
-    font-weight: 400;
-}
-
-header .btn {
-    margin-top: 15px;
-}
-
-/* ===== Search Box ===== */
-.search-box {
-    text-align: center;
-    margin: 20px 0;
-}
-
+/* Search Box */
+.search-box { text-align: center; margin: 20px 0; }
 #search {
     padding: 10px 15px;
     width: 80%;
     max-width: 400px;
     border-radius: 25px;
-    border: 1px solid #EFA7B7;
+    border: 1px solid #F7D9E3;
     outline: none;
     font-size: 16px;
 }
 
-/* ===== Category Buttons with Icons ===== */
+/* Category Buttons */
 .category {
     text-align: center;
     margin-bottom: 25px;
 }
-
 .category button {
-    background-color: #EFA7B7;
-    color: #333333;
+    background-color: #F7D9E3;
+    color: #4A3F4B;
     padding: 10px 20px;
     margin: 10px 5px 5px 5px;
     border: none;
@@ -84,12 +101,9 @@ header .btn {
     transition: 0.3s;
     position: relative;
 }
+.category button:hover { background-color: #EAC8D8; }
 
-.category button:hover {
-    background-color: #D78295;
-}
-
-/* Add icon above buttons */
+/* Category icons */
 .category button::before {
     content: '';
     display: block;
@@ -99,31 +113,15 @@ header .btn {
     background-size: contain;
     background-repeat: no-repeat;
 }
+button[onclick="filter('lipstick')"]::before { background-image: url('https://img.icons8.com/ios-filled/50/6D4C63/lipstick.png'); }
+button[onclick="filter('nailpaint')"]::before { background-image: url('https://img.icons8.com/ios-filled/50/6D4C63/nail-polish.png'); }
+button[onclick="filter('mascara')"]::before { background-image: url('https://img.icons8.com/ios-filled/50/6D4C63/mascara.png'); }
+button[onclick="filter('foundation')"]::before { background-image: url('https://img.icons8.com/ios-filled/50/6D4C63/foundation.png'); }
+button[onclick="filter('skincare')"]::before { background-image: url('https://img.icons8.com/ios-filled/50/6D4C63/face-cream.png'); }
+button[onclick="filter('haircare')"]::before { background-image: url('https://img.icons8.com/ios-filled/50/6D4C63/shampoo.png'); }
+button[onclick="filter('fragrance')"]::before { background-image: url('https://img.icons8.com/ios-filled/50/6D4C63/perfume-bottle.png'); }
 
-/* Example icon urls for each button */
-button[onclick="filter('lipstick')"]::before {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/lipstick.png');
-}
-button[onclick="filter('nailpaint')"]::before {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/nail-polish.png');
-}
-button[onclick="filter('mascara')"]::before {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/mascara.png');
-}
-button[onclick="filter('foundation')"]::before {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/foundation.png');
-}
-button[onclick="filter('skincare')"]::before {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/face-cream.png');
-}
-button[onclick="filter('haircare')"]::before {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/shampoo.png');
-}
-button[onclick="filter('fragrance')"]::before {
-    background-image: url('https://img.icons8.com/ios-filled/50/000000/perfume-bottle.png');
-}
-
-/* ===== Products Grid ===== */
+/* Products Grid */
 .products {
     display: flex;
     flex-wrap: wrap;
@@ -131,84 +129,48 @@ button[onclick="filter('fragrance')"]::before {
     gap: 20px;
     padding: 0 20px 40px 20px;
 }
-
 .product {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.06);
     text-align: center;
     width: 200px;
     transition: 0.4s;
-    border: 1px solid #FDE7EB; /* subtle soft frame */
+    border: 1px solid #F7D9E3;
 }
+.product:hover { transform: translateY(-6px); box-shadow: 0 10px 20px rgba(0,0,0,0.12); }
 
-.product:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
+/* Images Auto-Resize & Crop */
 .product img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 12px;
-    border: 2px solid #FDE7EB; /* frame effect */
+    border: 2px solid #F7D9E3;
 }
 
-.product h3 {
-    margin: 10px 0 5px 0;
-    font-weight: 500;
-    font-size: 1.1em;
-}
+/* Product Titles & Price */
+.product h3 { margin: 10px 0 5px 0; font-weight: 500; font-size: 1.1em; }
+.product p { margin: 5px 0 10px 0; font-weight: 400; }
 
-.product p {
-    margin: 5px 0 10px 0;
-    font-weight: 400;
-}
-
-/* ===== Buttons ===== */
-.btn {
-    background-color: #EFA7B7;
-    color: #333333;
-    padding: 10px 20px;
+/* Variants Dropdown */
+.shade-select {
+    margin: 10px 0;
+    padding: 5px 10px;
     border-radius: 8px;
-    text-decoration: none;
+    border: 1px solid #F7D9E3;
+    outline: none;
     font-weight: 500;
-    transition: 0.3s;
-    display: inline-block;
+    background-color: #FFF8F0;
 }
 
-.btn:hover {
-    background-color: #D78295;
-    color: #000000;
-}
+/* Footer */
+footer { text-align: center; padding: 25px 10px; background-color: #F7D9E3; color: #4A3F4B; font-size: 14px; margin-top: 40px; }
 
-/* ===== Footer ===== */
-footer {
-    text-align: center;
-    padding: 25px 10px;
-    background-color: rgba(253,243,245,0.9);
-    color: #666666;
-    font-size: 14px;
-    margin-top: 40px;
-}
-
-/* ===== Responsive ===== */
+/* Responsive */
 @media screen and (max-width: 600px) {
-    .products {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #search {
-        width: 90%;
-    }
-    
-    .product {
-        width: 80%;
-    }
-
-    .category button::before {
-        width: 25px;
-        height: 25px;
-    }
+    .featured-products, .products { flex-direction: column; align-items: center; }
+    .product, .featured .product { width: 80%; }
+    .category button::before { width: 25px; height: 25px; }
 }
