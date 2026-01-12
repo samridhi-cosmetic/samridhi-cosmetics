@@ -7,8 +7,7 @@ const products = [
     featured: true,
     variants: [
       {shade: "Red", img: "image/BlueHeavenRed.jpeg"},
-      {shade: "Pink", img: "image/BlueHeavenHazelnut.jpeg"},
-      {shade: "Nude", img: "image/lakme-lipstick-nude.jpg"}
+      {shade: "Hazelnut", img: "image/BlueHeavenHazelnut.jpeg"},
     ]
   },
   {
@@ -26,7 +25,7 @@ const products = [
     price: 499,
     featured: false,
     variants: [
-      {shade: "Black", img: "images/blueHeavenMascara.jpg"}
+      {shade: "Black", img: "images/blueHeavenMascara.jpeg"}
     ]
   }
 ];
