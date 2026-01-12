@@ -145,10 +145,8 @@ button[onclick="filter('fragrance')"]::before { background-image: url('https://i
 .product img {
     width: 100%;
     height: 250px;
-.product-card img {
-  object-fit: contain;
-  background: #fff;
-}
+object-fit: cover;
+
 
     border-radius: 12px;
     border: 2px solid #F7D9E3;
@@ -204,16 +202,5 @@ body.lightbox-open {
 body.lightbox-open {
   position: fixed;
   width: 100%;
-}
-@media (max-width: 768px) {
-  .hero {
-    height: 45vh;   /* instead of big full screen */
-  }
-}
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
 }
 
