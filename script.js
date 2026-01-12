@@ -1,13 +1,13 @@
 // ===== Product Array with Variants & Featured Flag =====
 const products = [
   {
-    name: "Lakme Lipstick",
+    name: "Blue Heaven Lipstick",
     category: "lipstick",
     price: 499,
     featured: true,
     variants: [
-      {shade: "Red", img: "images/lakme-lipstick-red.jpg"},
-      {shade: "Pink", img: "images/lakme-lipstick-pink.jpg"},
+      {shade: "Red", img: "images/BlueHeavenRed.jpeg"},
+      {shade: "Pink", img: "images/BlueHeavenHazelnut.jpeg"},
       {shade: "Nude", img: "images/lakme-lipstick-nude.jpg"}
     ]
   },
