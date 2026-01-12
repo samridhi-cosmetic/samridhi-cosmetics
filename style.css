@@ -174,3 +174,22 @@ footer { text-align: center; padding: 25px 10px; background-color: #F7D9E3; colo
     .product, .featured .product { width: 80%; }
     .category button::before { width: 25px; height: 25px; }
 }
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
