@@ -193,5 +193,12 @@ body.lightbox-open {
   max-width: 95%;
   max-height: 95%;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  touch-action: pinch-zoom;
+  -webkit-user-drag: none;
+  user-select: none;
 }
+body.lightbox-open {
+  position: fixed;
+  width: 100%;
+}
+
