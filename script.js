@@ -51,7 +51,7 @@ function displayProducts(list) {
     }
 
     div.innerHTML = `
-      <img src="${product.variants[0].img}" alt="${product.name}" loading="lazy" onerror="this.src='images/default-placeholder.jpg'">
+      <img src="${product.variants[0].img}" alt="${product.name}" onerror="this.src='images/default-placeholder.jpg'">
       <h3>${product.name}</h3>
       <p>₹${product.price}</p>
       ${variantSelect}
@@ -77,7 +77,7 @@ function displayFeatured() {
     }
 
     div.innerHTML = `
-      <img src="${product.variants[0].img}" alt="${product.name}" loading="lazy" onerror="this.src='images/default-placeholder.jpg'">
+      <img src="${product.variants[0].img}" alt="${product.name}" onerror="this.src='images/default-placeholder.jpg'">
       <h3>${product.name}</h3>
       <p>₹${product.price}</p>
       ${variantSelect}
