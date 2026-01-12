@@ -111,3 +111,16 @@ function searchProducts() {
   const filtered = products.filter(p => p.name.toLowerCase().includes(query));
   displayProducts(filtered);
 }
+document.getElementById("search").addEventListener("input", function () {
+  const query = this.value.toLowerCase();
+  const all = document.querySelectorAll(".product");
+
+  all.forEach(p => {
+    const name = p.querySelector("h3").innerText.toLowerCase();
+    if (name.includes(query)) {
+      p.style.display = "block";
+    } else {
+      p.style.display = "none";
+    }
+  });
+});
