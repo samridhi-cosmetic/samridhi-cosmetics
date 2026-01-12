@@ -1,8 +1,8 @@
 /* ===== Google Font ===== */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #FFF8F9; /* very soft light pink */
-    color: #333; /* easy reading */
+    background-color: #FFF8F9; /* very soft blush background */
+    color: #333333; /* easy to read */
     margin: 0;
     padding: 0;
 }
@@ -11,14 +11,14 @@ body {
 header {
     text-align: center;
     padding: 40px 20px;
-    background-color: #FDE7EB; /* soft rose header */
+    background-color: #FDF3F5; /* soft blush header */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
     font-weight: 700;
-    color: #D45C7B;
+    color: #D45C7B; /* premium rose color */
 }
 
 header p {
@@ -41,7 +41,7 @@ header .btn {
     width: 80%;
     max-width: 400px;
     border-radius: 25px;
-    border: 1px solid #F6CED8;
+    border: 1px solid #EFA7B7; /* subtle blush border */
     outline: none;
     font-size: 16px;
 }
@@ -53,8 +53,8 @@ header .btn {
 }
 
 .category button {
-    background-color: #F6CED8; /* soft rose */
-    color: #333;
+    background-color: #EFA7B7; /* muted blush */
+    color: #333333;
     padding: 10px 20px;
     margin: 5px;
     border: none;
@@ -65,7 +65,7 @@ header .btn {
 }
 
 .category button:hover {
-    background-color: #EAB1C0;
+    background-color: #D78295; /* slightly deeper blush */
 }
 
 /* ===== Products Grid ===== */
@@ -78,7 +78,74 @@ header .btn {
 }
 
 .product {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 15px;
     border-radius: 12px;
-    box-sh
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    width: 200px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin: 10px 0 5px 0;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+.product p {
+    margin: 5px 0 10px 0;
+    font-weight: 400;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    background-color: #EFA7B7; /* soft blush button */
+    color: #333333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #D78295; /* hover effect */
+    color: #000000;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    background-color: #FDF3F5;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 600px) {
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #search {
+        width: 90%;
+    }
+    
+    .product {
+        width: 80%;
+    }
+}
