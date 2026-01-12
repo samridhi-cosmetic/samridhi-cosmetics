@@ -26,7 +26,7 @@ const products = [
     price: 499,
     featured: false,
     variants: [
-      {shade: "Black", img: "image/blueHeavenMascara.jpg"}
+      {shade: "Black", img: "images/blueHeavenMascara.jpg"}
     ]
   }
 ];
