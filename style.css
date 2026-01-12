@@ -1,75 +1,84 @@
+/* ===== Google Font ===== */
 body {
-font-family: Arial;
-margin: 0;
-background: #fff0f5;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFF8F9; /* very soft light pink */
+    color: #333; /* easy reading */
+    margin: 0;
+    padding: 0;
 }
 
+/* ===== Header ===== */
 header {
-background: #d63384;
-color: white;
-text-align: center;
-padding: 30px;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #FDE7EB; /* soft rose header */
 }
 
-.btn {
-background: #28a745;
-color: white;
-padding: 10px 15px;
-text-decoration: none;
-border-radius: 5px;
-display: inline-block;
-margin-top: 10px;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #D45C7B;
 }
 
+header p {
+    margin: 5px 0;
+    font-weight: 400;
+}
+
+header .btn {
+    margin-top: 15px;
+}
+
+/* ===== Search Box ===== */
 .search-box {
-text-align: center;
-margin: 20px;
+    text-align: center;
+    margin: 20px 0;
 }
 
-.search-box input {
-width: 80%;
-padding: 10px;
-font-size: 16px;
+#search {
+    padding: 10px 15px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 25px;
+    border: 1px solid #F6CED8;
+    outline: none;
+    font-size: 16px;
 }
 
+/* ===== Category Buttons ===== */
 .category {
-text-align: center;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .category button {
-padding: 10px;
-margin: 5px;
-background: #d63384;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+    background-color: #F6CED8; /* soft rose */
+    color: #333;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
+.category button:hover {
+    background-color: #EAB1C0;
+}
+
+/* ===== Products Grid ===== */
 .products {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 20px;
-padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px 40px 20px;
 }
 
 .product {
-background: white;
-padding: 15px;
-text-align: center;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.product img {
-width: 100%;
-height: 150px;
-object-fit: cover;
-}
-
-footer {
-background: #333;
-color: white;
-text-align: center;
-padding: 20px;
-}
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-sh
