@@ -1,24 +1,44 @@
 /* ===== Google Font ===== */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #FFF8F9; /* very soft blush background */
-    color: #333333; /* easy to read */
+    background-color: #FFF8F9; /* soft blush */
+    color: #333333;
     margin: 0;
     padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1556228724-4d08f7f618de?auto=format&fit=crop&w=1200&q=40');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.98; /* subtle background effect */
+}
+
+/* ===== Hero Banner ===== */
+.hero {
+    width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 20px auto;
+}
+
+.hero img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 /* ===== Header ===== */
 header {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #FDF3F5; /* soft blush header */
+    padding: 30px 20px;
+    background-color: rgba(253,243,245,0.9); /* semi-transparent soft blush */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
     font-weight: 700;
-    color: #D45C7B; /* premium rose color */
+    color: #D45C7B;
 }
 
 header p {
@@ -41,31 +61,66 @@ header .btn {
     width: 80%;
     max-width: 400px;
     border-radius: 25px;
-    border: 1px solid #EFA7B7; /* subtle blush border */
+    border: 1px solid #EFA7B7;
     outline: none;
     font-size: 16px;
 }
 
-/* ===== Category Buttons ===== */
+/* ===== Category Buttons with Icons ===== */
 .category {
     text-align: center;
     margin-bottom: 25px;
 }
 
 .category button {
-    background-color: #EFA7B7; /* muted blush */
+    background-color: #EFA7B7;
     color: #333333;
     padding: 10px 20px;
-    margin: 5px;
+    margin: 10px 5px 5px 5px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 500;
     transition: 0.3s;
+    position: relative;
 }
 
 .category button:hover {
-    background-color: #D78295; /* slightly deeper blush */
+    background-color: #D78295;
+}
+
+/* Add icon above buttons */
+.category button::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 5px auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Example icon urls for each button */
+button[onclick="filter('lipstick')"]::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/lipstick.png');
+}
+button[onclick="filter('nailpaint')"]::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/nail-polish.png');
+}
+button[onclick="filter('mascara')"]::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/mascara.png');
+}
+button[onclick="filter('foundation')"]::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/foundation.png');
+}
+button[onclick="filter('skincare')"]::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/face-cream.png');
+}
+button[onclick="filter('haircare')"]::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/shampoo.png');
+}
+button[onclick="filter('fragrance')"]::before {
+    background-image: url('https://img.icons8.com/ios-filled/50/000000/perfume-bottle.png');
 }
 
 /* ===== Products Grid ===== */
@@ -81,20 +136,22 @@ header .btn {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
     text-align: center;
     width: 200px;
-    transition: 0.3s;
+    transition: 0.4s;
+    border: 1px solid #FDE7EB; /* subtle soft frame */
 }
 
 .product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 .product img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
+    border: 2px solid #FDE7EB; /* frame effect */
 }
 
 .product h3 {
@@ -110,7 +167,7 @@ header .btn {
 
 /* ===== Buttons ===== */
 .btn {
-    background-color: #EFA7B7; /* soft blush button */
+    background-color: #EFA7B7;
     color: #333333;
     padding: 10px 20px;
     border-radius: 8px;
@@ -121,7 +178,7 @@ header .btn {
 }
 
 .btn:hover {
-    background-color: #D78295; /* hover effect */
+    background-color: #D78295;
     color: #000000;
 }
 
@@ -129,9 +186,10 @@ header .btn {
 footer {
     text-align: center;
     padding: 25px 10px;
-    background-color: #FDF3F5;
+    background-color: rgba(253,243,245,0.9);
     color: #666666;
     font-size: 14px;
+    margin-top: 40px;
 }
 
 /* ===== Responsive ===== */
@@ -147,5 +205,10 @@ footer {
     
     .product {
         width: 80%;
+    }
+
+    .category button::before {
+        width: 25px;
+        height: 25px;
     }
 }
