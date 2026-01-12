@@ -6,9 +6,9 @@ const products = [
     price: 499,
     featured: true,
     variants: [
-      {shade: "Red", img: "images/BlueHeavenRed.jpeg"},
-      {shade: "Pink", img: "images/BlueHeavenHazelnut.jpeg"},
-      {shade: "Nude", img: "images/lakme-lipstick-nude.jpg"}
+      {shade: "Red", img: "image/BlueHeavenRed.jpeg"},
+      {shade: "Pink", img: "image/BlueHeavenHazelnut.jpeg"},
+      {shade: "Nude", img: "image/lakme-lipstick-nude.jpg"}
     ]
   },
   {
@@ -17,7 +17,7 @@ const products = [
     price: 199,
     featured: false,
     variants: [
-      {shade: "Red", img: "images/Elle18Red.jpeg"}
+      {shade: "Red", img: "image/Elle18Red.jpeg"}
     ]
   },
   {
@@ -26,7 +26,7 @@ const products = [
     price: 499,
     featured: false,
     variants: [
-      {shade: "Black", img: "images/blueHeavenMascara.jpg"}
+      {shade: "Black", img: "image/blueHeavenMascara.jpg"}
     ]
   }
 ];
